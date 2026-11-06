@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Appointments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>🐾 PetCare</h2>
+        <p class="tagline">Care Today, Happier Tomorrow ❤️</p>
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a class="active" href="appointments.html">📅 Appointments</a>
+            <a href="owners.html">👤 Pet Owners</a>
+            <a href="pets.html">🐶 My Pets</a>
+            <a href="medical.html">🩺 Medical Records</a>
+            <a href="services.html">❤️ Services</a>
+            <a href="contact.html">📞 Contact Us</a>
+        </nav>
+        <div class="help">
+            <h3>🐶 🐱</h3>
+            <h3>Need Help?</h3>
+            <p>We're always here for your pets.</p>
+            <a href="contact.html">Happy Pets ❤️</a>
+        </div>
+    </aside>
+
+    <main>
+        <header class="topbar">
+            <h2>🐾 Pet Care Management System</h2>
+            <span>🔔 &nbsp; Admin</span>
+        </header>
+
+        <h1>Appointments</h1>
+        <p>Schedule visits for your lovely pets.</p>
+
+        <div class="panel">
+            <h2>Book an Appointment</h2>
+
+            <form id="appointmentForm" class="form-grid">
+                <select name="pet_id" id="appointmentPet" required>
+                    <option value="">Select Pet</option>
+                </select>
+
+                <input name="doctor_name"
+                       placeholder="Doctor Name">
+
+                <input type="datetime-local"
+                       name="appointment_date" required>
+
+                <input name="reason"
+                       placeholder="Reason for Visit">
+
+                <select name="status">
+                    <option>Pending</option>
+                    <option>Confirmed</option>
+                    <option>Completed</option>
+                    <option>Cancelled</option>
+                </select>
+
+                <button type="submit" class="button">
+                    Book Appointment
+                </button>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Appointment List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pet</th>
+                        <th>Owner</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="appointmentsRows"></tbody>
+            </table>
+        </div>
+
+        <footer>🐾 PetCare ❤️</footer>
+    </main>
+</div>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

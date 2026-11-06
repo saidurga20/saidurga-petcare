@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>🐾 PetCare</h2>
+        <p class="tagline">Care Today, Happier Tomorrow ❤️</p>
+
+        <nav>
+            <a class="active" href="index.html">🏠 Dashboard</a>
+            <a href="appointments.html">📅 Appointments</a>
+            <a href="owners.html">👤 Pet Owners</a>
+            <a href="pets.html">🐶 My Pets</a>
+            <a href="medical.html">🩺 Medical Records</a>
+            <a href="services.html">❤️ Services</a>
+            <a href="contact.html">📞 Contact Us</a>
+        </nav>
+
+        <div class="help">
+            <h3>🐶 🐱</h3>
+            <h3>Need Help?</h3>
+            <p>We're always here for your pets.</p>
+            <a href="contact.html">Happy Pets ❤️</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <header class="topbar">
+            <h2>🐾 Pet Care Management System</h2>
+            <span>🔔 &nbsp; Admin</span>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div>
+                <h1>Because They<br>Are Family ❤️</h1>
+                <p>Give your lovely pets the care,<br>
+                   love and attention they deserve.</p>
+                <a href="appointments.html" class="button">
+                    Book an Appointment →
+                </a>
+            </div>
+
+            <div class="hero-images">
+                <img src="images/dog.jpg" alt="Dog">
+                <img src="images/cat.jpg" alt="Cat">
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat blue">
+                <h3>👤 Total Owners</h3>
+                <h1 id="ownerCount">0</h1>
+            </div>
+
+            <div class="stat green">
+                <h3>🐾 Total Pets</h3>
+                <h1 id="petCount">0</h1>
+            </div>
+
+            <div class="stat orange">
+                <h3>📅 Appointments</h3>
+                <h1 id="appointmentCount">0</h1>
+            </div>
+
+            <div class="stat purple">
+                <h3>✔ Completed Visits</h3>
+                <h1 id="completedCount">0</h1>
+            </div>
+        </section>
+
+        <!-- Dashboard Tables and Services -->
+        <section class="columns">
+
+            <div class="panel">
+                <h2>📅 Upcoming Appointments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pet</th>
+                            <th>Owner</th>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="upcomingRows">
+                        <tr>
+                            <td colspan="5">Loading appointments...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="panel">
+                <h2>❤️ Our Services</h2>
+
+                <div class="services">
+                    <div>🩺<h3>Health Checkup</h3></div>
+                    <div>💉<h3>Vaccination</h3></div>
+                    <div>🛁<h3>Pet Grooming</h3></div>
+                    <div>🐾<h3>Pet Care</h3></div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            🐾 Pet Care Management System |
+            Because They Are Family ❤️
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

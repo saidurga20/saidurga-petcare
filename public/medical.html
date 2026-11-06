@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetCare - Medical Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <h2>🐾 PetCare</h2>
+        <p class="tagline">Care Today, Happier Tomorrow ❤️</p>
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="appointments.html">📅 Appointments</a>
+            <a href="owners.html">👤 Pet Owners</a>
+            <a href="pets.html">🐶 My Pets</a>
+            <a class="active" href="medical.html">🩺 Medical Records</a>
+            <a href="services.html">❤️ Services</a>
+            <a href="contact.html">📞 Contact Us</a>
+        </nav>
+    </aside>
+    <main>
+        <header class="topbar"><h2>🐾 Pet Care Management System</h2></header>
+        <h1>Medical Records</h1>
+        <p>View appointment and visit history of pets.</p>
+        <div class="panel">
+            <h2>Pet Visit History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pet</th><th>Owner</th><th>Doctor</th>
+                        <th>Date</th><th>Reason</th><th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="medicalRows"></tbody>
+            </table>
+            <p class="note">Visit history is displayed using appointment records.</p>
+        </div>
+        <footer>🐾 PetCare ❤️</footer>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - My Pets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>🐾 PetCare</h2>
+        <p class="tagline">Care Today, Happier Tomorrow ❤️</p>
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="appointments.html">📅 Appointments</a>
+            <a href="owners.html">👤 Pet Owners</a>
+            <a class="active" href="pets.html">🐶 My Pets</a>
+            <a href="medical.html">🩺 Medical Records</a>
+            <a href="services.html">❤️ Services</a>
+            <a href="contact.html">📞 Contact Us</a>
+        </nav>
+        <div class="help">
+            <h3>🐶 🐱</h3>
+            <h3>Need Help?</h3>
+            <p>We're always here for your pets.</p>
+            <a href="contact.html">Happy Pets ❤️</a>
+        </div>
+    </aside>
+
+    <main>
+        <header class="topbar">
+            <h2>🐾 Pet Care Management System</h2>
+            <span>🔔 &nbsp; Admin</span>
+        </header>
+
+        <h1>My Pets</h1>
+        <p>Register and manage your lovely pets.</p>
+
+        <div class="panel">
+            <h2>Register a Pet</h2>
+
+            <form id="petForm" class="form-grid">
+                <select name="owner_id" id="petOwner" required>
+                    <option value="">Select Owner</option>
+                </select>
+
+                <input name="pet_name"
+                       placeholder="Pet Name" required>
+
+                <select name="species" required>
+                    <option value="">Select Species</option>
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Rabbit</option>
+                    <option>Bird</option>
+                    <option>Fish</option>
+                    <option>Hamster</option>
+                    <option>Other</option>
+                </select>
+
+                <input name="breed" placeholder="Breed">
+
+                <input name="age" type="number"
+                       min="0" placeholder="Age">
+
+                <button type="submit" class="button">
+                    Add Pet
+                </button>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Pet Details</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pet Name</th>
+                        <th>Species</th>
+                        <th>Breed</th>
+                        <th>Age</th>
+                        <th>Owner</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="petsRows"></tbody>
+            </table>
+        </div>
+
+        <footer>🐾 PetCare ❤️</footer>
+    </main>
+</div>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Owners</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>🐾 PetCare</h2>
+        <p class="tagline">Care Today, Happier Tomorrow ❤️</p>
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="appointments.html">📅 Appointments</a>
+            <a class="active" href="owners.html">👤 Pet Owners</a>
+            <a href="pets.html">🐶 My Pets</a>
+            <a href="medical.html">🩺 Medical Records</a>
+            <a href="services.html">❤️ Services</a>
+            <a href="contact.html">📞 Contact Us</a>
+        </nav>
+        <div class="help">
+            <h3>🐶 🐱</h3>
+            <h3>Need Help?</h3>
+            <p>We're always here for your pets.</p>
+            <a href="contact.html">Happy Pets ❤️</a>
+        </div>
+    </aside>
+
+    <main>
+        <header class="topbar">
+            <h2>🐾 Pet Care Management System</h2>
+            <span>🔔 &nbsp; Admin</span>
+        </header>
+
+        <h1>Pet Owners</h1>
+        <p>Manage pet owner information.</p>
+
+        <div class="panel">
+            <h2>Add New Owner</h2>
+
+            <form id="ownerForm" class="form-grid">
+                <input name="name"
+                       placeholder="Owner Name" required>
+
+                <input name="email" type="email"
+                       placeholder="Email Address">
+
+                <input name="phone"
+                       placeholder="Phone Number">
+
+                <input name="address"
+                       placeholder="Address">
+
+                <button type="submit" class="button">
+                    Add Owner
+                </button>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Owner Details</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ownersRows"></tbody>
+            </table>
+        </div>
+
+        <footer>🐾 PetCare ❤️</footer>
+    </main>
+</div>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
